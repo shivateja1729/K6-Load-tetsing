@@ -1,0 +1,32 @@
+{
+  "name": "newman_parallel",
+  "version": "1.0.1",
+  "description": "A known limitation of the Postman Collection Runner is that it can only execute collection in a consecutive way.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apideck/postman-to-k6": "^1.8.5",
+    "async": "^3.2.4",
+    "newman": "^5.3.2",
+    "path": "^0.12.7"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m4nu56/newman-parallel-run.git"
+  },
+  "bugs": {
+    "url": "https://github.com/m4nu56/newman-parallel-run/issues"
+  },
+  "homepage": "https://github.com/m4nu56/newman-parallel-run#readme",
+  "devDependencies": {
+    "postman-to-k6": "^1.5.1"
+  }
+}
