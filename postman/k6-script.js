@@ -11,28 +11,25 @@ postman[Symbol.for("initial")]({
 
 export default function() {
   postman[Request]({
-    name: "enrollments",
-    id: "b53e511d-f0a1-4459-a3f6-4bc0bad4ad19",
+    name: "enrollmentsv2",
+    id: "5cece6f4-6d81-487b-9daa-48731c587a73",
     method: "POST",
     address: "http://34.87.20.129/v1/graphql",
     data:
-      '{"query":"query($email:String! $includeTasks:Boolean!){\\n  enrollments(userEmail:$email includeTasks:$includeTasks){\\n    id\\n    slug\\n    title\\n    description\\n    tasks{\\n      id\\n      slug\\n      type\\n      title\\n      description\\n      parentTaskSlug\\n      completionRate\\n    }\\n    completionRate\\n  }\\n}","variables":"{\\n    \\"email\\":\\"shivateja.dasi@the10xacademy.com\\",\\n    \\"includeTasks\\":true\\n}"}',
+      '{"query":"query{\\n    enrollments(userEmail:\\"shivateja.dasi@the10xacademy.com\\" includeTasks:true){\\n        slug\\n        title\\n        completionRate\\n        tasks{\\n            slug\\n            title\\n            completionRate\\n        }\\n    }\\n}"}',
     headers: {
+      Accept: "*/*",
       "Accept-Language": "en-US,en;q=0.9",
       Authorization:
-        "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoaXZhdGVqYS5kYXNpQHRoZTEweGFjYWRlbXkuY29tIiwidXNlciI6eyJ1dWlkIjoiNTEzYmIxNTktZjlkZS01M2YxLWJkZmItYTlkMzM0NDM0MzdmIiwiZmlyc3ROYW1lIjoiU2hpdmF0ZWphIiwibGFzdE5hbWUiOiJEYXNpIiwiZW1haWwiOiJzaGl2YXRlamEuZGFzaUB0aGUxMHhhY2FkZW15LmNvbSIsInBob25lTnVtYmVyIjpudWxsLCJpc1Bob25lTnVtYmVyVmVyaWZpZWQiOm51bGwsIm5pY2tOYW1lIjoiU2hpdmF0ZWphIERhc2kiLCJyb2xlIjoiQURNSU4iLCJhZGRyZXNzIjoiIiwiY2l0eSI6IiIsImF2YXRhcl91cmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQVRYQUp3X1dLdTdEOVd6Y1ZyWk9TT3diTEVBX0IyS2w1WFBsT1NidTFwNz1zOTYtYyIsImNyZWF0ZWRBdCI6MTYzODgxMTAwNywidXBkYXRlZEF0IjoxNjM5ODEwNzA4LCJsaW5rZWRJblVSTCI6bnVsbH0sImV4cCI6MTY2NDYyNzc4OCwianRpIjoiMTA0NDg3MDA4ODE0Mzk1NzMzNTAwIiwiaWF0IjoxNjYzNzYzNzg4LCJpc3MiOiJnb29nbGUiLCJuYmYiOjE2NjM3NjM3ODh9.FYAANrQEFU6MKvun_fT2BhnL0vgFfiXU80p9Q-zTpuYx3UHD63jgv7UJ40OfTCYv5ncgLBpDxNW0lOQSfl3GyA",
+        "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoaXZhdGVqYS5kYXNpQHRoZTEweGFjYWRlbXkuY29tIiwidXNlciI6eyJmaXJzdE5hbWUiOiJTaGl2YXRlamEiLCJsYXN0TmFtZSI6IkRhc2kiLCJlbWFpbCI6InNoaXZhdGVqYS5kYXNpQHRoZTEweGFjYWRlbXkuY29tIiwicGhvbmVOdW1iZXIiOm51bGwsImlzUGhvbmVOdW1iZXJWZXJpZmllZCI6bnVsbCwibmlja05hbWUiOiJTaGl2YXRlamEgRGFzaSIsInJvbGUiOiJBRE1JTiIsImFkZHJlc3MiOiIiLCJjaXR5IjoiIiwiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FBVFhBSndfV0t1N0Q5V3pjVnJaT1NPd2JMRUFfQjJLbDVYUGxPU2J1MXA3PXM5Ni1jIiwiY3JlYXRlZEF0IjoxNjM4ODExMDA3LCJ1cGRhdGVkQXQiOjE2Mzk4MTA3MDgsImxpbmtlZEluVVJMIjpudWxsfSwiZXhwIjoxNjY1NjU5NjkxLCJqdGkiOiIxMDQ0ODcwMDg4MTQzOTU3MzM1MDAiLCJpYXQiOjE2NjQ3OTU2OTEsImlzcyI6Imdvb2dsZSIsIm5iZiI6MTY2NDc5NTY5MX0.PDHaeOXNBmZMWSFrkVCIsuCp4FYtMlS6DSGI9jTpVgwPYVEZyZ1al2zuRrItuIzNl17GF2F0_gwhzPJEkHbuvQ",
+      "Cache-Control": "no-cache",
       Connection: "keep-alive",
       Origin: "http://34.87.20.129",
+      Pragma: "no-cache",
       Referer: "http://34.87.20.129/",
       "User-Agent":
         "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Mobile Safari/537.36",
-      accept: "application/json, multipart/mixed",
       "content-type": "application/json"
-    },
-    post(response) {
-      pm.test("Status code is 200", function() {
-        pm.response.to.have.status(200);
-      });
     }
   });
 }
