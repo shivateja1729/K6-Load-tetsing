@@ -2,7 +2,14 @@
 
 import "./libs/shim/core.js";
 
-export let options = { maxRedirects: 4 };
+export let options = { 
+  maxRedirects: 4 ,
+  stages: [
+    { duration: '5s', target: 100 }, // simulate ramp-up of traffic from 1 to 100 users over 5 minutes.
+    { duration: '10m', target: 100 }, // stay at 100 users for 10 minutes
+    { duration: '5s', target: 0 }, // ramp-down to 0 users
+  ]
+};
 
 const Request = Symbol.for("request");
 postman[Symbol.for("initial")]({
@@ -11,8 +18,8 @@ postman[Symbol.for("initial")]({
 
 export default function() {
   postman[Request]({
-    name: "enrollmentsv2",
-    id: "5cece6f4-6d81-487b-9daa-48731c587a73",
+    name: "enrollments",
+    id: "47bce833-cd36-4831-8d46-f6a5fe86fcb3",
     method: "POST",
     address: "http://34.87.20.129/v1/graphql",
     data:

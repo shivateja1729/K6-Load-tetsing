@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "7dd1c05e-8ea5-4ad2-ae2b-42b595ba1110",
+		"name": "modulesBySlugs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21614577"
+	},
+	"item": [
+		{
+			"name": "modulesBySlugs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "en-US,en;q=0.9"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoaXZhdGVqYS5kYXNpQHRoZTEweGFjYWRlbXkuY29tIiwidXNlciI6eyJmaXJzdE5hbWUiOiJTaGl2YXRlamEiLCJsYXN0TmFtZSI6IkRhc2kiLCJlbWFpbCI6InNoaXZhdGVqYS5kYXNpQHRoZTEweGFjYWRlbXkuY29tIiwicGhvbmVOdW1iZXIiOm51bGwsImlzUGhvbmVOdW1iZXJWZXJpZmllZCI6bnVsbCwibmlja05hbWUiOiJTaGl2YXRlamEgRGFzaSIsInJvbGUiOiJBRE1JTiIsImFkZHJlc3MiOiIiLCJjaXR5IjoiIiwiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FBVFhBSndfV0t1N0Q5V3pjVnJaT1NPd2JMRUFfQjJLbDVYUGxPU2J1MXA3PXM5Ni1jIiwiY3JlYXRlZEF0IjoxNjM4ODExMDA3LCJ1cGRhdGVkQXQiOjE2Mzk4MTA3MDgsImxpbmtlZEluVVJMIjpudWxsfSwiZXhwIjoxNjY1NjU5NjkxLCJqdGkiOiIxMDQ0ODcwMDg4MTQzOTU3MzM1MDAiLCJpYXQiOjE2NjQ3OTU2OTEsImlzcyI6Imdvb2dsZSIsIm5iZiI6MTY2NDc5NTY5MX0.PDHaeOXNBmZMWSFrkVCIsuCp4FYtMlS6DSGI9jTpVgwPYVEZyZ1al2zuRrItuIzNl17GF2F0_gwhzPJEkHbuvQ"
+					},
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Origin",
+						"value": "http://34.87.20.129"
+					},
+					{
+						"key": "Referer",
+						"value": "http://34.87.20.129/"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Mobile Safari/537.36"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, multipart/mixed"
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query{\n  modulesBySlugs(slugs:[\"bootcamp-dsa-2021-12\",\"dsa-2021-06\"] includeTasks:true){\n    slug\n    title\n    description\n    tasks{\n      slug\n      title\n    }\n  }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://34.87.20.129/v1/graphql",
+					"protocol": "http",
+					"host": [
+						"34",
+						"87",
+						"20",
+						"129"
+					],
+					"path": [
+						"v1",
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

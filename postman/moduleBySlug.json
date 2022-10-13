@@ -1,20 +1,16 @@
 {
 	"info": {
-		"_postman_id": "d44cd56e-541a-4a05-8918-81a5a76ba86f",
-		"name": "V2 Backend APIs",
+		"_postman_id": "e1f2f93a-940e-4b66-b4bf-b477279e2ba8",
+		"name": "moduleBySlug",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "21614577"
 	},
 	"item": [
 		{
-			"name": "enrollmentsv2",
+			"name": "moduleBySlug",
 			"request": {
 				"method": "POST",
 				"header": [
-					{
-						"key": "Accept",
-						"value": "*/*"
-					},
 					{
 						"key": "Accept-Language",
 						"value": "en-US,en;q=0.9"
@@ -22,10 +18,6 @@
 					{
 						"key": "Authorization",
 						"value": "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoaXZhdGVqYS5kYXNpQHRoZTEweGFjYWRlbXkuY29tIiwidXNlciI6eyJmaXJzdE5hbWUiOiJTaGl2YXRlamEiLCJsYXN0TmFtZSI6IkRhc2kiLCJlbWFpbCI6InNoaXZhdGVqYS5kYXNpQHRoZTEweGFjYWRlbXkuY29tIiwicGhvbmVOdW1iZXIiOm51bGwsImlzUGhvbmVOdW1iZXJWZXJpZmllZCI6bnVsbCwibmlja05hbWUiOiJTaGl2YXRlamEgRGFzaSIsInJvbGUiOiJBRE1JTiIsImFkZHJlc3MiOiIiLCJjaXR5IjoiIiwiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FBVFhBSndfV0t1N0Q5V3pjVnJaT1NPd2JMRUFfQjJLbDVYUGxPU2J1MXA3PXM5Ni1jIiwiY3JlYXRlZEF0IjoxNjM4ODExMDA3LCJ1cGRhdGVkQXQiOjE2Mzk4MTA3MDgsImxpbmtlZEluVVJMIjpudWxsfSwiZXhwIjoxNjY1NjU5NjkxLCJqdGkiOiIxMDQ0ODcwMDg4MTQzOTU3MzM1MDAiLCJpYXQiOjE2NjQ3OTU2OTEsImlzcyI6Imdvb2dsZSIsIm5iZiI6MTY2NDc5NTY5MX0.PDHaeOXNBmZMWSFrkVCIsuCp4FYtMlS6DSGI9jTpVgwPYVEZyZ1al2zuRrItuIzNl17GF2F0_gwhzPJEkHbuvQ"
-					},
-					{
-						"key": "Cache-Control",
-						"value": "no-cache"
 					},
 					{
 						"key": "Connection",
@@ -36,16 +28,16 @@
 						"value": "http://34.87.20.129"
 					},
 					{
-						"key": "Pragma",
-						"value": "no-cache"
-					},
-					{
 						"key": "Referer",
 						"value": "http://34.87.20.129/"
 					},
 					{
 						"key": "User-Agent",
 						"value": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Mobile Safari/537.36"
+					},
+					{
+						"key": "accept",
+						"value": "application/json, multipart/mixed"
 					},
 					{
 						"key": "content-type",
@@ -55,7 +47,7 @@
 				"body": {
 					"mode": "graphql",
 					"graphql": {
-						"query": "query{\n    enrollments(userEmail:\"shivateja.dasi@the10xacademy.com\" includeTasks:true){\n        slug\n        title\n        completionRate\n        tasks{\n            slug\n            title\n            completionRate\n        }\n    }\n}",
+						"query": "query{\n  moduleBySlug(slug:\"bootcamp-dsa-2021-12\"){\n    slug\n    title\n    description\n    tasks{\n      slug\n      title\n      description\n    }\n  }\n}",
 						"variables": ""
 					}
 				},
