@@ -2,14 +2,7 @@
 
 import "./libs/shim/core.js";
 
-export let options = { 
-  maxRedirects: 4 ,
-  stages: [
-    { duration: '5s', target: 100 }, // simulate ramp-up of traffic from 1 to 100 users over 5 minutes.
-    { duration: '10m', target: 100 }, // stay at 100 users for 10 minutes
-    { duration: '5s', target: 0 }, // ramp-down to 0 users
-  ]
-};
+export let options = { maxRedirects: 4 };
 
 const Request = Symbol.for("request");
 postman[Symbol.for("initial")]({
@@ -19,7 +12,7 @@ postman[Symbol.for("initial")]({
 export default function() {
   postman[Request]({
     name: "enrollments",
-    id: "47bce833-cd36-4831-8d46-f6a5fe86fcb3",
+    id: "52cfc908-ecab-40e1-9bf8-4aa94c37fcb7",
     method: "POST",
     address: "http://34.87.20.129/v1/graphql",
     data:
@@ -28,7 +21,7 @@ export default function() {
       Accept: "*/*",
       "Accept-Language": "en-US,en;q=0.9",
       Authorization:
-        "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoaXZhdGVqYS5kYXNpQHRoZTEweGFjYWRlbXkuY29tIiwidXNlciI6eyJmaXJzdE5hbWUiOiJTaGl2YXRlamEiLCJsYXN0TmFtZSI6IkRhc2kiLCJlbWFpbCI6InNoaXZhdGVqYS5kYXNpQHRoZTEweGFjYWRlbXkuY29tIiwicGhvbmVOdW1iZXIiOm51bGwsImlzUGhvbmVOdW1iZXJWZXJpZmllZCI6bnVsbCwibmlja05hbWUiOiJTaGl2YXRlamEgRGFzaSIsInJvbGUiOiJBRE1JTiIsImFkZHJlc3MiOiIiLCJjaXR5IjoiIiwiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FBVFhBSndfV0t1N0Q5V3pjVnJaT1NPd2JMRUFfQjJLbDVYUGxPU2J1MXA3PXM5Ni1jIiwiY3JlYXRlZEF0IjoxNjM4ODExMDA3LCJ1cGRhdGVkQXQiOjE2Mzk4MTA3MDgsImxpbmtlZEluVVJMIjpudWxsfSwiZXhwIjoxNjY1NjU5NjkxLCJqdGkiOiIxMDQ0ODcwMDg4MTQzOTU3MzM1MDAiLCJpYXQiOjE2NjQ3OTU2OTEsImlzcyI6Imdvb2dsZSIsIm5iZiI6MTY2NDc5NTY5MX0.PDHaeOXNBmZMWSFrkVCIsuCp4FYtMlS6DSGI9jTpVgwPYVEZyZ1al2zuRrItuIzNl17GF2F0_gwhzPJEkHbuvQ",
+        "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoaXZhdGVqYS5kYXNpQHRoZTEweGFjYWRlbXkuY29tIiwidXNlciI6eyJmaXJzdE5hbWUiOiJTaGl2YXRlamEiLCJsYXN0TmFtZSI6IkRhc2kiLCJlbWFpbCI6InNoaXZhdGVqYS5kYXNpQHRoZTEweGFjYWRlbXkuY29tIiwicGhvbmVOdW1iZXIiOm51bGwsImlzUGhvbmVOdW1iZXJWZXJpZmllZCI6bnVsbCwibmlja05hbWUiOiJTaGl2YXRlamEgRGFzaSIsInJvbGUiOiJBRE1JTiIsImFkZHJlc3MiOiIiLCJjaXR5IjoiIiwiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FBVFhBSndfV0t1N0Q5V3pjVnJaT1NPd2JMRUFfQjJLbDVYUGxPU2J1MXA3PXM5Ni1jIiwiY3JlYXRlZEF0IjoxNjM4ODExMDA3LCJ1cGRhdGVkQXQiOjE2Mzk4MTA3MDgsImxpbmtlZEluVVJMIjpudWxsfSwiZXhwIjoxNjY2MjU2NDg3LCJqdGkiOiIxMDQ0ODcwMDg4MTQzOTU3MzM1MDAiLCJpYXQiOjE2NjUzOTI0ODcsImlzcyI6Imdvb2dsZSIsIm5iZiI6MTY2NTM5MjQ4N30.EIXAZ2R27357SdYhNGthYbsKM8c184ye_hogaJLoUHcharvELVOgaB-keFnuQQFDpgFAyfR3FFee_Tz0qgLgIA",
       "Cache-Control": "no-cache",
       Connection: "keep-alive",
       Origin: "http://34.87.20.129",
