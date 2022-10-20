@@ -11,25 +11,31 @@ postman[Symbol.for("initial")]({
 
 export default function() {
   postman[Request]({
-    name: "enrollments",
-    id: "52cfc908-ecab-40e1-9bf8-4aa94c37fcb7",
+    name: "track",
+    id: "1dbe0734-4b88-45ad-b60a-c95ad8687122",
     method: "POST",
-    address: "http://34.87.20.129/v1/graphql",
+    address: "https://staging.student.the10xacademy.com/v1/graphql",
     data:
-      '{"query":"query{\\n    enrollments(userEmail:\\"shivateja.dasi@the10xacademy.com\\" includeTasks:true){\\n        slug\\n        title\\n        completionRate\\n        tasks{\\n            slug\\n            title\\n            completionRate\\n        }\\n    }\\n}"}',
+      '{"variables":{},"query":"{\\n  enrollments(\\n    userEmail: \\"shivateja.dasi@the10xacademy.com\\"\\n    includeTasks: true\\n    taskLimit: 0\\n    track: \\"HMS - 24th Sept, 2022\\"\\n  ) {\\n    slug\\n    title\\n    description\\n    track\\n    completionRate\\n    tasks {\\n      slug\\n      title\\n      type\\n      description\\n      parentTaskSlug\\n      completionRate\\n      __typename\\n    }\\n    __typename\\n  }\\n}"}',
     headers: {
-      Accept: "*/*",
-      "Accept-Language": "en-US,en;q=0.9",
-      Authorization:
-        "Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoaXZhdGVqYS5kYXNpQHRoZTEweGFjYWRlbXkuY29tIiwidXNlciI6eyJmaXJzdE5hbWUiOiJTaGl2YXRlamEiLCJsYXN0TmFtZSI6IkRhc2kiLCJlbWFpbCI6InNoaXZhdGVqYS5kYXNpQHRoZTEweGFjYWRlbXkuY29tIiwicGhvbmVOdW1iZXIiOm51bGwsImlzUGhvbmVOdW1iZXJWZXJpZmllZCI6bnVsbCwibmlja05hbWUiOiJTaGl2YXRlamEgRGFzaSIsInJvbGUiOiJBRE1JTiIsImFkZHJlc3MiOiIiLCJjaXR5IjoiIiwiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FBVFhBSndfV0t1N0Q5V3pjVnJaT1NPd2JMRUFfQjJLbDVYUGxPU2J1MXA3PXM5Ni1jIiwiY3JlYXRlZEF0IjoxNjM4ODExMDA3LCJ1cGRhdGVkQXQiOjE2Mzk4MTA3MDgsImxpbmtlZEluVVJMIjpudWxsfSwiZXhwIjoxNjY2MjU2NDg3LCJqdGkiOiIxMDQ0ODcwMDg4MTQzOTU3MzM1MDAiLCJpYXQiOjE2NjUzOTI0ODcsImlzcyI6Imdvb2dsZSIsIm5iZiI6MTY2NTM5MjQ4N30.EIXAZ2R27357SdYhNGthYbsKM8c184ye_hogaJLoUHcharvELVOgaB-keFnuQQFDpgFAyfR3FFee_Tz0qgLgIA",
-      "Cache-Control": "no-cache",
-      Connection: "keep-alive",
-      Origin: "http://34.87.20.129",
-      Pragma: "no-cache",
-      Referer: "http://34.87.20.129/",
-      "User-Agent":
-        "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Mobile Safari/537.36",
-      "content-type": "application/json"
+      authority: "staging.student.the10xacademy.com",
+      accept: "*/*",
+      "accept-language": "en-US,en;q=0.9",
+      "content-type": "application/json",
+      cookie:
+        "authorization=%7B%22refresh_token%22%3A%22%22%2C%22token%22%3A%22eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoaXZhdGVqYS5kYXNpQHRoZTEweGFjYWRlbXkuY29tIiwidXNlciI6eyJ1dWlkIjoiNTEzYmIxNTktZjlkZS01M2YxLWJkZmItYTlkMzM0NDM0MzdmIiwiZmlyc3ROYW1lIjoiU2hpdmF0ZWphIiwibGFzdE5hbWUiOiJEYXNpIiwiZW1haWwiOiJzaGl2YXRlamEuZGFzaUB0aGUxMHhhY2FkZW15LmNvbSIsInBob25lTnVtYmVyIjpudWxsLCJpc1Bob25lTnVtYmVyVmVyaWZpZWQiOm51bGwsIm5pY2tOYW1lIjoiU2hpdmF0ZWphIERhc2kiLCJyb2xlIjoiQURNSU4iLCJhZGRyZXNzIjoiIiwiY2l0eSI6IiIsImF2YXRhcl91cmwiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQVRYQUp3X1dLdTdEOVd6Y1ZyWk9TT3diTEVBX0IyS2w1WFBsT1NidTFwNz1zOTYtYyIsImNyZWF0ZWRBdCI6MTYzODgxMTAwNywidXBkYXRlZEF0IjoxNjM5ODEwNzA4LCJsaW5rZWRJblVSTCI6bnVsbH0sImV4cCI6MTY2NzEzMjAxMiwianRpIjoiMTA0NDg3MDA4ODE0Mzk1NzMzNTAwIiwiaWF0IjoxNjY2MjY4MDEyLCJpc3MiOiJnb29nbGUiLCJuYmYiOjE2NjYyNjgwMTJ9.q6nV_y_rSjOISOVClbXWj8LZX0SNyAWnjHmvtIZInvDQ4U72V8boI4ZDiK8VN2UO-6W3DSrYbwXA3qbcj9rWlQ%22%2C%22type%22%3A%22Bearer%22%7D",
+      origin: "https://staging.student.the10xacademy.com",
+      referer:
+        "https://staging.student.the10xacademy.com/HMS%20-%2024th%20Sept%2C%202022/module-hms-2022-09-24/EXERCISE/0CGLTvNV8V",
+      "sec-ch-ua":
+        '".Not/A)Brand";v="99", "Google Chrome";v="103", "Chromium";v="103"',
+      "sec-ch-ua-mobile": "?1",
+      "sec-ch-ua-platform": '"Android"',
+      "sec-fetch-dest": "empty",
+      "sec-fetch-mode": "cors",
+      "sec-fetch-site": "same-origin",
+      "user-agent":
+        "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Mobile Safari/537.36"
     }
   });
 }
